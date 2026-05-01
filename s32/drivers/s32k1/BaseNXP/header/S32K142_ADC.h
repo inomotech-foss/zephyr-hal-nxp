@@ -71,7 +71,6 @@
 /** ADC - Size of Registers Arrays */
 #define ADC_SC1_COUNT                             16u
 #define ADC_R_COUNT                               16u
-#define ADC_CV_COUNT                              2u
 
 /** ADC - Register Layout Typedef */
 typedef struct {
@@ -79,7 +78,8 @@ typedef struct {
   __IO uint32_t CFG1;                              /**< ADC Configuration Register 1, offset: 0x40 */
   __IO uint32_t CFG2;                              /**< ADC Configuration Register 2, offset: 0x44 */
   __I  uint32_t R[ADC_R_COUNT];                    /**< ADC Data Result Registers, array offset: 0x48, array step: 0x4 */
-  __IO uint32_t CV[ADC_CV_COUNT];                  /**< Compare Value Registers, array offset: 0x88, array step: 0x4 */
+  __IO uint32_t CV1;                               /**< Compare Value Register 1, offset: 0x88 */
+  __IO uint32_t CV2;                               /**< Compare Value Register 2, offset: 0x8C */
   __IO uint32_t SC2;                               /**< Status and Control Register 2, offset: 0x90 */
   __IO uint32_t SC3;                               /**< Status and Control Register 3, offset: 0x94 */
   __IO uint32_t BASE_OFS;                          /**< BASE Offset Register, offset: 0x98 */
